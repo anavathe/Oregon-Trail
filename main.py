@@ -112,16 +112,11 @@ def days_in_month(m):
 	# Enter your code here
   return 1
 
-# Calculates whether a sickess occurs on the current day based
-# on how many days remain in the month and how many sick days have
-# already occured this month. If there are N days left in the month, then
-# the chance of a sick day is either 0, 1 out of N, or 2 out of N, depending
-# on whether there have been 2 sick days so far, 1 sick day so far, or no
-# sick days so far.
-
-# This system guarantees that there will be exactly
-# 2 sick days each month, and incidentally that every day of the month
-# is equally likely to be a sick day (proof left to the reader!)
+# Determines which (random) days of the month the player is going to get sick. The expectation is that at the start of each new month, you want to run this function, and figure out two days during which a player is going to get sick. 
+# For example, in March, use random.sample(range(1, 31), 2) to output 2 random numbers between 1 to 31. days_in_month(m) can be helpful here to know what your random range will be for any given month.
+# Whenever time passes either of those two days pass (this can happen during travel, rest, hunting etc), call handle_sickness to update the player's health. 
+def sick_days_this_month()
+ return 1
 
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def random_sickness_occurs():
