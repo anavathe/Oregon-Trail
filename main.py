@@ -87,23 +87,15 @@ NAME_OF_MONTH = [
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def date_as_string(m, d):
 	# Enter your code here 
-  return 1
-
-# Prints out what date is. Use the global variables you are updating throughout gameplay to help with this function. 
-# input: Nothing.
-# output: 
-# To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
-def date_report():
-#  Enter your code here
-  return 1
-
+  	return 1
+  
 # Prints out how many miles are left. Player starts at 2000 and you should be updating how far they have traveled using 'miles_traveled' as gameplay continues.
 # input: nothing
 # output: a number that indicates how many miles are remaining. If there are no miles remaining, the game ends as the player has won!
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def miles_remaining():
 	# Enter your code here
-  return 1
+  	return 1
 
 # Returns the number of days in the month (28, 30, or 31).
 # input: an integer from 1 to 12. 1=January, 2=February, etc.
@@ -112,88 +104,79 @@ def miles_remaining():
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def days_in_month(m):
 	# Enter your code here
-  return 1
-
-# Determines which (random) days of the month the player is going to get sick. The expectation is that at the start of each new month, you want to run this function, and figure out two days during which a player is going to get sick. 
-# For example, in March, use random.sample(range(1, 31), 2) to output 2 random numbers between 1 to 31. days_in_month(m) can be helpful here to know what your random range will be for any given month. 
-# For future months, random.sample(range(days_in_month(m)-day, days_in_month(m)), 2) is a good starting point to find 2 sick days a player will get sick. 
+  	return 1
+   
+# Determines which (random) days of the month the player is going to get sick. 
+# The expectation is that at the start of each new month, you want to run this function, and figure out two days during which a player is going to get sick. 
+# You are going to need to call randint (1, DAYS_IN_MONTH) twice and make sure the second number is not the same as the first. You will also need to figure out the DAYS_IN_MONTH and generate
+# the random integer between 1 and that. 
 # Update first_sick_day and second_sick_day with the 2 random numbers generated.   
 # input: nothing
 # output: nothing
 
 def sick_day_generator():
-  # Enter your code here
- return 1
+  	# Enter your code here
+	return 1
 
-# This function will tell you if sickness occurs on any given day. Whenever time passes either of the two days from sick_day_generator(), a sickness has occured. This can happen during travel, rest, hunting etc. Make sure you update sicknesses_suffered_this_month by 1 if a sick day has passed. 
+# This function will tell you if sickness occurs on any given day. Whenever the user passes the days given by first_sick_day or second_sick_day, a sickness has occured. 
+# This can happen during travel, rest, hunting etc. Make sure you update sicknesses_suffered_this_month by 1 if a sick day has passed. 
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def random_sickness_occurs():
 	# Enter your code here
-  return 1
+  	return 1
 
-# This function should update the health of a player. If a random sickness occurs, health goes down by 1. 
+# This function should update the health of a player. If a random sickness occurs, health goes down by the same that you gain when you rest. 
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def handle_sickness():
 	# Enter your code here
-  return 1
+  	return 1
 
 # A player's gotta eat every day. A player consumers FOOD_EATEN_PER_DAY every day. Remember, some actions take multiple days, so FOOD_EATEN_PER_DAY should be multiplied by that amount of days. 
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def consume_food():
 	# Enter your code here
-  return 1
-
-# Repairs problematic values in the global (month, day) model where the day is
-# larger than the number of days in the month. For example, the month cannot be March, if the Day is 32. If this happens, advances the global month variable to the next
-# month and knocks the day value down accordingly. For a new month, the Day starts at 1. Knows that different months have
-# different numbers of days, use the Constants defined at the start of the program accordinly. Doesn't handle cases where the day is more than 28
-# days in excess of the limit for that month -- could still end up with an
-# impossible date after this function is called.
-#
-# Returns True if the global month/day values were altered, as in anything was reset, else False.
-def maybe_rollover_month():
-	# Enter your code here
-  return 1
+  	return 1
 
 # Causes a certain number of days to elapse. The days pass one at a time, and each
 # day brings with it a random chance of sickness. The sickness rules are quirky: player
 # is guaranteed to fall ill a certain number of times each month, so illness
-# needs to keep track of month changes.
+# needs to keep track of month changes. You will need to deal with month changes when the day becomes greater than days this month. 
+# 
 #
 # input: num_days - an integer number of days that elapse.
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def add_day(num_days):
 	# Enter your code here
-  return 1
+  	return 1
 
 # This is a handler for if a player selects 'travel' as an action. Think about what happens when 'travel' is selected and what other functions need to be called from this handler.
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def handle_travel():
 	# Enter your code here
-  return 1
+ 	 return 1
 
 # This is a handler for if a player selects 'rest' as an action. Think about what happens when 'rest' is selected and what other functions need to be called from this handler.
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def handle_rest():
-# Enter your code here
-  return 1
+	# Enter your code here
+	return 1
 
 # This is a handler for if a player selects 'hunt' as an action. Think about what happens when 'hunt' is selected and what other functions need to be called from this handler.
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def handle_hunt():
 	# Enter your code here
-  return 1
+	return 1
 
 # This is a handler for if a player selects 'status' as an action. The player wants info and we're gonna give it to them! This function should print food, health, distance traveled, and day.
 def handle_status():
 	# Enter your code here
-  return 1
+  	return 1
 
 # This is handler for if a player selects 'help' as an action. Good thing we defined help_text at the start of this program...
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def handle_help():
-# Enter your code here
-  return 1
+	# Enter your code here
+  	return 1
 
 # This is a handler for if a player selects 'quit' as an action. This ends the game. Note that adding the word 'global' in front of a variable makes the variable global and usable outside of the context of the function.  
 
@@ -209,12 +192,12 @@ def handle_invalid_input(response):
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def game_is_over():
 	# Enter your code here
-  return 1
+  	return 1
 
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def player_wins():
 	# Enter your code here
-  return 1
+  	return 1
 
 # This is the main gameplay code. If you want, you can define and create a new select_action function to help with this part. We won't take marks off for no select_action being defined (even though it says to in the rubric).
 print(welcome_text + help_text + good_luck_text)
