@@ -128,7 +128,7 @@ def random_sickness_occurs():
 	# Enter your code here
   return 1
 
-# This function should update the health of a player.
+# This function should update the health of a player. If a random sickness occurs, health goes down by 1 only. 
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def handle_sickness():
 	# Enter your code here
@@ -159,7 +159,7 @@ def maybe_rollover_month():
 #
 # input: num_days - an integer number of days that elapse.
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
-def advance_game_clock(num_days):
+def add_day(num_days):
 	# Enter your code here
   return 1
 
