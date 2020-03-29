@@ -1,4 +1,4 @@
-#Starter Code
+# Starter Code
 # Simulation game of traveling out west in 1800's
 
 import random
@@ -161,7 +161,7 @@ def add_day(num_days):
 # This is a handler for if a player selects 'travel' as an action. Think about what happens when 'travel' is selected and what other functions need to be called from this handler.
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def handle_travel():
-	# Enter your code here
+	
   return 1
 
 # This is a handler for if a player selects 'rest' as an action. Think about what happens when 'rest' is selected and what other functions need to be called from this handler.
@@ -193,7 +193,7 @@ def handle_quit():
 	global playing
 	playing = False
 
-# Sometimes players might enter gibberish or actions that we have not defined in our game. This is handler
+# Sometimes players might enter gibberish or actions that we have not defined in our game. This is a handler to ask for another response if that is the case. 
 def handle_invalid_input(response):
 	print("'{0}' is not a valid command. Try again.".format(response))
 
@@ -208,13 +208,14 @@ def player_wins():
 	# Enter your code here
   return 1
 
+# This is the main gameplay code. If you want, you can define and create a new select_action function to help with this part. We won't take marks off for no select_action being defined (even though it says to in the rubric).
 print(welcome_text + help_text + good_luck_text)
 player_name = input("\nWhat is your name, player?")
 
 playing = True
 handle_status()
 
-# This is the main 
+
 while playing:
 	print()
 	action = input("Choose an action, {0} -->".format(player_name))
