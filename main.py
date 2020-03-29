@@ -44,10 +44,12 @@ month = 3
 day = 1
 sicknesses_suffered_this_month = 0
 player_name = None
+first_sick_day = 1
+second_sick_day = 2
 
 # Constants -- parameters that define the rules of the game,
 # but which don't change. An 'travel' action can take the player 
-# between 30-60 miles, and take 3-7 days. Use the Random function with the min and max values below to determine what happens per turn/action taken. 
+# between 30-60 miles, and take 3-7 days. Use the Random function with the min and max values below to determine what happens per turn/action taken. Notice the syntax on constants vs global variables- the lowercase versus all caps.   
 MIN_MILES_PER_TRAVEL = 30
 MAX_MILES_PER_TRAVEL = 60
 MIN_DAYS_PER_TRAVEL = 3
@@ -113,11 +115,17 @@ def days_in_month(m):
   return 1
 
 # Determines which (random) days of the month the player is going to get sick. The expectation is that at the start of each new month, you want to run this function, and figure out two days during which a player is going to get sick. 
-# For example, in March, use random.sample(range(1, 31), 2) to output 2 random numbers between 1 to 31. days_in_month(m) can be helpful here to know what your random range will be for any given month.
-def sick_days_this_month():
+# For example, in March, use random.sample(range(1, 31), 2) to output 2 random numbers between 1 to 31. days_in_month(m) can be helpful here to know what your random range will be for any given month. 
+# For future months, random.sample(range(days_in_month(m)-day, days_in_month(m)), 2) is a good starting point to find 2 sick days a player will get sick. 
+# Update first_sick_day and second_sick_day with the 2 random numbers generated.   
+# input: nothing
+# output: nothing
+
+def sick_day_generator():
+  # Enter your code here
  return 1
 
-# This function will tell you if sickness occurs on any given day. Whenever time passes either of the two days from sick_days_this_month(), a sickness has occured. This can happen during travel, rest, hunting etc. Make sure you update sicknesses_suffered_this_month by 1 if a sick day has passed. 
+# This function will tell you if sickness occurs on any given day. Whenever time passes either of the two days from sick_day_generator(), a sickness has occured. This can happen during travel, rest, hunting etc. Make sure you update sicknesses_suffered_this_month by 1 if a sick day has passed. 
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def random_sickness_occurs():
 	# Enter your code here
@@ -161,7 +169,7 @@ def add_day(num_days):
 # This is a handler for if a player selects 'travel' as an action. Think about what happens when 'travel' is selected and what other functions need to be called from this handler.
 # To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
 def handle_travel():
-	
+	# Enter your code here
   return 1
 
 # This is a handler for if a player selects 'rest' as an action. Think about what happens when 'rest' is selected and what other functions need to be called from this handler.
@@ -214,7 +222,6 @@ player_name = input("\nWhat is your name, player?")
 
 playing = True
 handle_status()
-
 
 while playing:
 	print()
