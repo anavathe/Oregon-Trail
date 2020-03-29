@@ -208,12 +208,6 @@ def player_wins():
 	# Enter your code here
   return 1
 
-# This prints relevant info so the player knows their status at the time of loss (if a loss occurs).
-# To help the code run while you update the code for the various functions, we added 'return 1'. Do not forget to edit this as you write this function.
-def loss_report():
-	# Enter your code here
-  return 1
-
 print(welcome_text + help_text + good_luck_text)
 player_name = input("\nWhat is your name, player?")
 
@@ -248,4 +242,3 @@ if player_wins():
 else:
 	print("\n\nAlas! You lose.")
 	handle_status()
-	print(loss_report())
